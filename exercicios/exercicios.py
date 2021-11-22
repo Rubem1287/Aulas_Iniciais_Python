@@ -2,27 +2,45 @@
 #Primeiro exercício
 print()
 
-numero = int(input('digite um número inteiro :'))
+numeros = input('Digite um número inteiro :')
+if numeros.isdigit():
+    numero = int(numeros)
 
-if numero % 2 == 0:
-    print('Esse número é inteiro.')
+    if numero == 0:
+        print('0 é neutro.')
+        
+    elif numero % 2 == 0:
+        print('Esse número é Par.')
     
+    else:
+        print('Esse número é Impar.')
+        
 else:
-    print('Esse número não é inteiro.')
+    print('Isso que foi digitado não é um número inteiro.')
+    
     
     
     #Segundo exercicio
-hora = int(input('digite a hora :'))
+horario = input('Digite a hora entre 0 a 23 :')
 
-if hora >= 0 and hora <= 11:
-    print('Bom dia.')
+if horario.isdigit():
+    hora = int(horario)
+    if hora >= 0 and hora <= 23:
+        if hora >= 0 and hora <= 11:
+            print('Bom dia.')
     
-elif hora >= 12 and hora <= 17:
-    print('Boa tarde.')
+        elif hora >= 12 and hora <= 17:
+            print('Boa tarde.')
     
-elif hora >= 18 and hora <= 23:
-    print('Boa noite.')
-    
+        elif hora >= 18 and hora <= 23:
+            print('Boa noite.')
+        
+    else:
+        print('Erro: O horário aceito é entre 0 a 23 horas.')
+        
+else:
+    print('O que foi digitado não é um hora.')
+     
     
     #Terceiro exercicio
 print()    
